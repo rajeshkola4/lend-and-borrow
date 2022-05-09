@@ -1,15 +1,13 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
+import lbStore from './modules/lbStore'
+import authStore from './modules/authStore'
+Vue.use(Vuex);
+const store = new Vuex.Store({
+  modules:{
+    lbStore:lbStore,
+    authStore:authStore
   }
-})
+});
+export default store;
